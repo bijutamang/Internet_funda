@@ -1,0 +1,641 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* -------------------
+Variables
+---------------------- */
+:root {
+  --main-color: #e02f6b;
+  /* --back_color: ; */
+  --blue: #0000ff;
+  --blue-dark: #18293c;
+  --orange: #ffa500;
+  --yello: yellow;
+  --green-yellow: #cddc39;
+  --pink-ligth: #efa2b4;
+  --cyan-light: #aef1ee;
+  --white: #ffffff;
+  --back-ground: #e92626;
+  --white-alpha-40: rgba(255, 255, 255, 0.4);
+  --white-alpha-25: rgba(255, 255, 255, 0.25);
+  --backdrop-filter-blur: blur(5px);
+}
+
+/* Main/Global Section Start  */
+body {
+  background-color: black;
+  padding: 0 6rem;
+  font-family: "Poppins", sans-serif;
+}
+.main {
+  height: 100vh;
+  padding-top: 0.8rem;
+}
+span {
+  color: red;
+}
+
+.btn {
+  background-color: var(--back-ground);
+  text-transform: uppercase;
+  height: 2.4rem;
+  margin-top: 2rem;
+  border: none;
+  width: 9rem;
+  padding: 0.2rem;
+  cursor: pointer;
+  color: rgb(226, 226, 226);
+  border: 1px solid white;
+  font-size: 1.2rem;
+}
+.btn:hover {
+  color: black;
+  background-color: #d61919;
+}
+.header_section {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  color: white;
+  width: 50%;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.menu {
+  margin-top: 1rem;
+  width: 50%;
+  padding: 0.8rem;
+}
+/* Main/Global Section End  */
+
+/* Header sectin Start  */
+
+/* 2 side Display here  */
+/* Left Side Text  */
+.same_box {
+  display: flex;
+  justify-content: space-between;
+}
+.left h4 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+/* Rigth Side Text  */
+.same_box .right {
+  width: 50%;
+}
+.right p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+/* Header section end  */
+nav {
+  height: 50px;
+  width: 100%;
+}
+nav ul {
+  /* float: left; */
+  margin-right: 2.5rem;
+  display: none;
+}
+nav li {
+  display: inline;
+  margin: 0 0.5rem;
+  /* line-height: ; */
+}
+
+nav a {
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  padding: 0.4rem 0.6rem;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+a.active,
+a:hover {
+  border: 1px solid white;
+  transition: 0.5s;
+}
+
+nav #icon {
+  color: white;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  float: right;
+  margin-right: 2.3rem;
+  cursor: pointer;
+  /* display: none; */
+}
+
+@media (max-width: 1048px) {
+  nav ul {
+    margin-right:10px;
+    width: 50%;
+  }
+  nav li {
+    padding: 1.8rem;
+    display: block;
+    margin: 50px;
+    line-height: 1.7rem;
+  }
+  nav li a {
+    font-size: 1.4rem;
+  }
+  nav a {
+    font-size: 1rem;
+    display: block;
+  }
+}
+@media (max-width: 1900px) {
+  nav #icon {
+    display: block;
+  }
+  nav ul {
+    display: block;
+    position: fixed;
+    width: 15%;
+    height: 80vh;
+    background-color: #2f3640;
+    top: 6rem;
+    right: 110%;
+    transition: all 0.5s;
+    text-align: center;
+  }
+  nav li {
+    padding: 1.4rem;
+    display: block;
+    margin: 50px;
+    line-height: 0.5rem;
+  }
+  nav li a {
+    font-size: 1.2rem;
+  }
+
+  a.active,
+  a:hover {
+    border: none;
+    color: #3498db;
+  }
+
+  nav ul.show {
+    right: -50px;
+  }
+  nav ul.hide {
+    background: transparent;
+    /* opacity: 5; */
+  }
+}
+/* Home section  start */
+.home_section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home_section .left {
+  width: 50%;
+  padding-top: 7rem;
+}
+
+.home_section .left h1 {
+  color: white;
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+.home_section .left p {
+  color: white;
+  font-weight: 500;
+  /* opacity: 0.5; */
+  font-size: 0.8rem;
+  padding-top: 12px;
+  width: 80%;
+  line-height: 1.3;
+}
+/* Home section  end */
+
+/* ---------------- About Section Start Here ---------------  */
+.abouts {
+  height: 60vh;
+}
+
+.about_main {
+  display: flex;
+  margin-top: 8rem;
+  justify-content: space-between;
+}
+
+/* About page Right Section Start */
+.about_right {
+  color: white;
+  width: 50%;
+}
+
+.about_right h3 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+.about_right .skills {
+  padding-top: 3rem;
+}
+
+.about_right .skills .first_skill,
+.about_right .skills .second_skill {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0 0 0;
+}
+
+.about_right .skills .first_skill {
+  padding-bottom: 2rem;
+}
+.about_right .skills .skill_item1 h5,
+.about_right .skills .skill_item2 h5,
+.about_right .skills .skill_item3 h5,
+.about_right .skills .skill_item4 h5 {
+  font-size: 1.7rem;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+.about_right .skills .skill_item1 p,
+.about_right .skills .skill_item2 p,
+.about_right .skills .skill_item3 p,
+.about_right .skills .skill_item4 p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding-bottom: 5px;
+  opacity: 0.8;
+}
+.about_right .skills .skill_item4 {
+  margin-right: 1.2rem;
+}
+/* --------------- About Section End Here --------------- */
+
+/* --------------- Projects Section Start Here --------------- */
+.projects {
+  height: 90vh;
+  margin-top: 12rem;
+  color: white;
+}
+
+/* Projects Card Here  */
+.pro_card {
+  display: flex;
+}
+
+.card1,
+.card2,
+.card3 {
+  margin-top: 4rem;
+  height: 50vh;
+  width: 33.33%;
+  /* border: 1px solid; */
+  padding: 10px;
+  margin: 1.2rem;
+  /* box-shadow: 5px 10px 200px 15px rgb(20, 19, 19); */
+  border-radius: 10px;
+  /* opacity: 1; */
+}
+.card1 {
+  margin-top: 6rem;
+}
+.card2 {
+  margin-top: 9rem;
+}
+.card3 {
+  margin-top: 12rem;
+}
+
+.right .ContactP {
+  margin-bottom: 2rem;
+}
+
+.card1 img,
+.card2 img,
+.card3 img {
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid red;
+  padding: 15px;
+  border-radius: 100px;
+}
+.card1 img:hover {
+  background: transparent;
+  /* color: white; */
+  opacity: 3;
+}
+
+/* Card Text Section  */
+.pro_card h6 {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+.pro_card p {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  padding-top: 10px;
+}
+
+.projects .pro_card .card1,
+.projects .pro_card .card2,
+.projects .pro_card .card3{
+  overflow: hidden;
+  /* box-shadow: 0 5px 0.4rem rgba(0,0,0,.1); */
+  flex:1 1 30rem;
+  height: 25rem;
+  position: relative;
+}
+
+/* Projects :hover  */
+.projects .pro_card .card1 .content,
+.projects .pro_card .card2 .content,
+.projects .pro_card .card3 .content{
+  position: absolute;
+  top:-100%; left:0;
+  height: 100%;
+  width:100%;
+  text-align: center;
+  background:rgba(0, 0, 0, 0.7);
+  padding:2rem;
+  padding-top: 5rem;
+}
+
+.projects .pro_card .card1:hover .content,
+.projects .pro_card .card2:hover .content,
+.projects .pro_card .card3:hover .content{
+  top:0;
+}
+
+.projects .pro_card .content h3{
+  font-size: 2rem;
+  color:var(--orange);
+}
+
+.projects .pro_card .content p{
+  font-size: 1.1rem;
+  color:rgb(255, 255, 255);
+  padding:.5rem 0;
+}
+
+
+/* button  */
+
+.btn{
+  display: inline-block;
+  background:var(--orange);
+  color:#fff;
+  /* padding:.8rem 3rem; */
+  border:.2rem solid var(--orange);
+  cursor: pointer;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  height: 2.4rem;
+  margin-top: 2rem;
+  width: 12rem;
+}
+
+.btn:hover{
+  background:rgba(255, 165, 0,.2);
+  color:var(--orange);
+}
+/* --------------- Projects Section End Here --------------- */
+
+/* --------------- Contact Section Start Here --------------- */
+.contact {
+  height: 65vh;
+  color: white;
+  margin-top: 10rem;
+}
+/* Forms Section   */
+section .container .contactForm {
+  position: absolute;
+  margin-top: 4rem;
+  width: calc(100% - 150px);
+  height: 70%;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+section .container .contactForm .formBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+section .container .contactForm .formBox .inputBox {
+  position: relative;
+  margin: 0 0 34px 0;
+}
+
+section .container .contactForm .formBox .inputBox.w50 {
+  width: 50%;
+}
+/* Mobile  */
+section .container .contactForm .formBox .inputBox.w60 {
+  width: 30%;
+}
+/* Email ko lagi  */
+section .container .contactForm .formBox .inputBox.w70 {
+  /* box-shadow: 1px solid white; */
+  width: 30%;
+  top: 5.3rem;
+  right: 25rem;
+}
+/* Text Area  */
+section .container .contactForm .formBox .inputBox.w100 {
+  width: 80%;
+}
+
+/* input vitra lykhyko text haru ko size haru milako  */
+section .container .contactForm .formBox .inputBox input,
+section .container .contactForm .formBox .inputBox textarea {
+  width: 100% !important;
+  padding: 5px 0;
+  resize: none;
+  font-weight: 300;
+  font-size: 18px;
+  color: green;
+  border: none;
+  background-color: black;
+  padding-top: 1.8rem;
+  border-bottom: 2px solid #777;
+  outline: none;
+}
+
+section .container .contactForm .formBox .inputBox textarea {
+  min-height: 120px;
+}
+
+/* yo red color ko vayar mathi janxh */
+section .container .contactForm .formBox .inputBox span {
+  position: absolute;
+  left: 0;
+  font-weight: 300;
+  transition: 0.3s;
+  pointer-events: none;
+  font-size: 18px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+/* Input ma :focus huda mathi jany banako  */
+section .container .contactForm .formBox .inputBox input:focus ~ span,
+section
+  .container
+  .contactForm
+  .formBox
+  .inputBox
+  textarea:focus
+  ~ span
+  section
+  .container
+  .contactForm
+  .formBox
+  .inputBox
+  input:valid
+  ~ span,
+  /* yo vanyko click gara text mathi jany banako  */
+section .container .contactForm .formBox .inputBox textarea:valid ~ span {
+  transform: translateY(-20px);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #ff568c;
+}
+
+.mes {
+  /* width: 11rem; */
+  font-size: 1rem;
+  /* margin-bottom: 1rem; */
+  height: 3rem;
+  /* margin-bottom: 15rem; */
+}
+/* --------------- Contact Section End Here --------------- */
+
+/* --------------- Footer Section Start Here --------------- */
+.footer {
+  height: 5rem;
+  color: white;
+  margin-top: 14rem;
+  /* margin-bottom: 4rem; */
+  display: flex;
+}
+.footer .icons h4 {
+  padding-bottom: 15px;
+  margin-left: 1rem;
+}
+.footer .icons {
+  width: 50%;
+  padding-top: 1.5rem;
+}
+.footer .icons a {
+  font-size: 2rem;
+  color: white;
+  margin: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.footer .icons a .hovg:hover { 
+  color: white;
+}
+.footer .icons a .hovf:hover {
+  color: blue;
+}
+.footer .icons a .hovy:hover {
+  color: red;
+}
+.footer .icons a .hovt:hover {
+  color: rgb(1, 209, 199);
+}
+
+.footer .copy {
+  width: 50%;
+}
+
+.footer .copy p {
+  float: right;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  padding: 1.8rem;
+  letter-spacing: 3;
+}
+/* --------------- Footer Section End Here --------------- */
+
+/* Responsive Start Here  */
+@media (max-width: 991px) {
+  html {
+    font-size: 80%;
+  }
+  /* home section  */
+  .home_section {
+    display: block;
+  }
+  .home_section .left {
+    width: 100%;
+    text-align: center;
+  }
+  .home_section .left p {
+    text-align: center;
+    width: 80%;
+    font-size: 1rem;
+  }
+  .home_section .right {
+    /* margin-left: 10rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Contact  */
+  /* Mobile  */
+  section .container .contactForm .formBox .inputBox.w60 {
+    width: 40%;
+  }
+  /* Email ko lagi  */
+  section .container .contactForm .formBox .inputBox.w70 {
+    /* box-shadow: 1px solid white; */
+    width: 40%;
+    top: 6.3rem;
+    right: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 70%;
+  }
+
+  /* contact */
+  section .container .contactForm .formBox .inputBox.w70 {
+    /* box-shadow: 1px solid white; */
+    width: 40%;
+    top: 6.8rem;
+    right: 1rem;
+  }
+  section .container .contactForm .formBox .inputBox.w100 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  html {
+    font-size: 65%;
+  }
+}
+/* Responsive End Here  */
